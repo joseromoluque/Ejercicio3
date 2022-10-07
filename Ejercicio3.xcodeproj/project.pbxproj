@@ -16,6 +16,9 @@
 		FC95897B28F094A8002294F4 /* Ejercicio3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC95897A28F094A8002294F4 /* Ejercicio3Tests.swift */; };
 		FC95898528F094A8002294F4 /* Ejercicio3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC95898428F094A8002294F4 /* Ejercicio3UITests.swift */; };
 		FC95898728F094A8002294F4 /* Ejercicio3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC95898628F094A8002294F4 /* Ejercicio3UITestsLaunchTests.swift */; };
+		FC95899428F09642002294F4 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC95899328F09642002294F4 /* Album.swift */; };
+		FC95899628F096C1002294F4 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC95899528F096C1002294F4 /* MusicCell.swift */; };
+		FC95899828F096EB002294F4 /* AlbumProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC95899728F096EB002294F4 /* AlbumProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		FC95898028F094A8002294F4 /* Ejercicio3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ejercicio3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC95898428F094A8002294F4 /* Ejercicio3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ejercicio3UITests.swift; sourceTree = "<group>"; };
 		FC95898628F094A8002294F4 /* Ejercicio3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ejercicio3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FC95899328F09642002294F4 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		FC95899528F096C1002294F4 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
+		FC95899728F096EB002294F4 /* AlbumProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +108,10 @@
 				FC95896328F094A5002294F4 /* AppDelegate.swift */,
 				FC95896528F094A5002294F4 /* SceneDelegate.swift */,
 				FC95896728F094A5002294F4 /* ViewController.swift */,
+				FC95899328F09642002294F4 /* Album.swift */,
+				FC95899728F096EB002294F4 /* AlbumProtocol.swift */,
 				FC95896928F094A5002294F4 /* Main.storyboard */,
+				FC95899528F096C1002294F4 /* MusicCell.swift */,
 				FC95896C28F094A7002294F4 /* Assets.xcassets */,
 				FC95896E28F094A7002294F4 /* LaunchScreen.storyboard */,
 				FC95897128F094A7002294F4 /* Info.plist */,
@@ -258,9 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC95899628F096C1002294F4 /* MusicCell.swift in Sources */,
 				FC95896828F094A5002294F4 /* ViewController.swift in Sources */,
 				FC95896428F094A5002294F4 /* AppDelegate.swift in Sources */,
 				FC95896628F094A5002294F4 /* SceneDelegate.swift in Sources */,
+				FC95899428F09642002294F4 /* Album.swift in Sources */,
+				FC95899828F096EB002294F4 /* AlbumProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

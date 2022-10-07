@@ -1,24 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ejercicio3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableViewCell key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicCell" rowHeight="150" id="qp0-5v-wKw" userLabel="MusicCell" customClass="MusicCell" customModule="trabajo_viernes1" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qp0-5v-wKw" id="q3x-tb-N4q">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="pu9-Db-aXp">
+                                    <rect key="frame" x="30" y="10" width="120" height="120"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="7cz-7s-5h4"/>
+                                        <constraint firstAttribute="height" constant="120" id="MjL-49-M1K"/>
+                                        <constraint firstAttribute="width" secondItem="pu9-Db-aXp" secondAttribute="height" multiplier="1:1" id="mab-dP-Icd"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título del album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNQ-mi-wHS">
+                                    <rect key="frame" x="160" y="10" width="121.33333333333331" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-dx-1ci">
+                                    <rect key="frame" x="160" y="41" width="29.333333333333343" height="11"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="vNQ-mi-wHS" firstAttribute="top" secondItem="q3x-tb-N4q" secondAttribute="top" constant="10" id="Fwx-LX-PTN"/>
+                                <constraint firstItem="wbc-dx-1ci" firstAttribute="leading" secondItem="pu9-Db-aXp" secondAttribute="trailing" constant="10" id="Oyt-A2-pvk"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="pu9-Db-aXp" secondAttribute="bottom" constant="10" id="adr-qQ-3Tf"/>
+                                <constraint firstItem="pu9-Db-aXp" firstAttribute="leading" secondItem="q3x-tb-N4q" secondAttribute="leadingMargin" constant="10" id="gAw-2V-VLL"/>
+                                <constraint firstItem="wbc-dx-1ci" firstAttribute="top" secondItem="vNQ-mi-wHS" secondAttribute="bottom" constant="10" id="pfA-nv-v0D"/>
+                                <constraint firstItem="vNQ-mi-wHS" firstAttribute="leading" secondItem="pu9-Db-aXp" secondAttribute="trailing" constant="10" id="tjl-UE-009"/>
+                                <constraint firstItem="pu9-Db-aXp" firstAttribute="top" secondItem="q3x-tb-N4q" secondAttribute="top" constant="10" id="zaC-IF-OJM"/>
+                            </constraints>
+                        </tableViewCellContentView>
+                        <accessibility key="accessibilityConfiguration" identifier="IDmcell">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <connections>
+                            <outlet property="artistOutlet" destination="wbc-dx-1ci" id="eh9-97-osP"/>
+                            <outlet property="imageOutlet" destination="pu9-Db-aXp" id="qMY-sE-xYV"/>
+                            <outlet property="titleOutlet" destination="vNQ-mi-wHS" id="qXA-DR-GlT"/>
+                        </connections>
+                    </tableViewCell>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="48" y="-2"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="640" height="987"/>
+    </resources>
 </document>
