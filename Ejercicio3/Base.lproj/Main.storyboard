@@ -3,6 +3,8 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -10,53 +12,71 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ejercicio3" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableViewCell key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicCell" rowHeight="150" id="qp0-5v-wKw" userLabel="MusicCell" customClass="MusicCell" customModule="trabajo_viernes1" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="srM-fD-14g">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qp0-5v-wKw" id="q3x-tb-N4q">
-                            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="pu9-Db-aXp">
-                                    <rect key="frame" x="30" y="10" width="120" height="120"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="120" id="7cz-7s-5h4"/>
-                                        <constraint firstAttribute="height" constant="120" id="MjL-49-M1K"/>
-                                        <constraint firstAttribute="width" secondItem="pu9-Db-aXp" secondAttribute="height" multiplier="1:1" id="mab-dP-Icd"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título del album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNQ-mi-wHS">
-                                    <rect key="frame" x="160" y="10" width="121.33333333333331" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-dx-1ci">
-                                    <rect key="frame" x="160" y="41" width="29.333333333333343" height="11"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="vNQ-mi-wHS" firstAttribute="top" secondItem="q3x-tb-N4q" secondAttribute="top" constant="10" id="Fwx-LX-PTN"/>
-                                <constraint firstItem="wbc-dx-1ci" firstAttribute="leading" secondItem="pu9-Db-aXp" secondAttribute="trailing" constant="10" id="Oyt-A2-pvk"/>
-                                <constraint firstAttribute="bottomMargin" secondItem="pu9-Db-aXp" secondAttribute="bottom" constant="10" id="adr-qQ-3Tf"/>
-                                <constraint firstItem="pu9-Db-aXp" firstAttribute="leading" secondItem="q3x-tb-N4q" secondAttribute="leadingMargin" constant="10" id="gAw-2V-VLL"/>
-                                <constraint firstItem="wbc-dx-1ci" firstAttribute="top" secondItem="vNQ-mi-wHS" secondAttribute="bottom" constant="10" id="pfA-nv-v0D"/>
-                                <constraint firstItem="vNQ-mi-wHS" firstAttribute="leading" secondItem="pu9-Db-aXp" secondAttribute="trailing" constant="10" id="tjl-UE-009"/>
-                                <constraint firstItem="pu9-Db-aXp" firstAttribute="top" secondItem="q3x-tb-N4q" secondAttribute="top" constant="10" id="zaC-IF-OJM"/>
-                            </constraints>
-                        </tableViewCellContentView>
-                        <accessibility key="accessibilityConfiguration" identifier="IDmcell">
-                            <bool key="isElement" value="YES"/>
-                        </accessibility>
-                        <connections>
-                            <outlet property="artistOutlet" destination="wbc-dx-1ci" id="eh9-97-osP"/>
-                            <outlet property="imageOutlet" destination="pu9-Db-aXp" id="qMY-sE-xYV"/>
-                            <outlet property="titleOutlet" destination="vNQ-mi-wHS" id="qXA-DR-GlT"/>
-                        </connections>
-                    </tableViewCell>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="L7j-Jq-xG9">
+                                <rect key="frame" x="16" y="20" width="358" height="733"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicCell" rowHeight="150" id="5tm-Z7-cKG" customClass="MusicCell" customModule="StoryboardMusicTable" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="358" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5tm-Z7-cKG" id="cfH-0f-Rjb">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="kAO-ZN-Zrd">
+                                                    <rect key="frame" x="30" y="10" width="120" height="119"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="Gd4-LL-xO9"/>
+                                                        <constraint firstAttribute="height" constant="120" id="e4p-x2-CnR"/>
+                                                        <constraint firstAttribute="width" secondItem="kAO-ZN-Zrd" secondAttribute="height" multiplier="1:1" id="nGn-QD-tlp"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título del album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6d-iO-q7S">
+                                                    <rect key="frame" x="160" y="10" width="121.33333333333331" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGx-YA-Iah">
+                                                    <rect key="frame" x="160" y="41" width="29.333333333333343" height="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kAO-ZN-Zrd" firstAttribute="leading" secondItem="cfH-0f-Rjb" secondAttribute="leadingMargin" constant="10" id="5yD-yX-vY7"/>
+                                                <constraint firstItem="kAO-ZN-Zrd" firstAttribute="top" secondItem="cfH-0f-Rjb" secondAttribute="top" constant="10" id="GGF-Hi-Gf1"/>
+                                                <constraint firstItem="p6d-iO-q7S" firstAttribute="leading" secondItem="kAO-ZN-Zrd" secondAttribute="trailing" constant="10" id="bwo-1m-pRg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kAO-ZN-Zrd" secondAttribute="bottom" constant="10" id="iuB-bE-wCK"/>
+                                                <constraint firstItem="dGx-YA-Iah" firstAttribute="top" secondItem="p6d-iO-q7S" secondAttribute="bottom" constant="10" id="ldI-au-fHj"/>
+                                                <constraint firstItem="dGx-YA-Iah" firstAttribute="leading" secondItem="kAO-ZN-Zrd" secondAttribute="trailing" constant="10" id="nPI-mb-Ruc"/>
+                                                <constraint firstItem="p6d-iO-q7S" firstAttribute="top" secondItem="cfH-0f-Rjb" secondAttribute="top" constant="10" id="peD-D2-SQJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="IDmcell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <connections>
+                                            <outlet property="artistOutlet" destination="dGx-YA-Iah" id="FaI-zZ-BqL"/>
+                                            <outlet property="imageOutlet" destination="kAO-ZN-Zrd" id="SJP-lR-zME"/>
+                                            <outlet property="titleOutlet" destination="p6d-iO-q7S" id="qrT-9O-HKz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="daB-0z-MKh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="tvOutlet" destination="L7j-Jq-xG9" id="KPT-aw-Y5Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,5 +85,8 @@
     </scenes>
     <resources>
         <image name="Image" width="640" height="987"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
