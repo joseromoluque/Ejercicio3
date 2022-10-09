@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eMU-4e-qLF">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21225"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,24 +10,63 @@
         <!--Table View Controller-->
         <scene sceneID="HaM-rb-KUL">
             <objects>
-                <tableViewController id="eMU-4e-qLF" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="jKf-pW-u5F">
+                <tableViewController id="eMU-4e-qLF" customClass="TableViewController" customModule="Ejercicio3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LFz-8O-8QC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KQx-Qi-4Sl">
-                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicCell" rowHeight="150" id="Xe9-fQ-XQ8" customClass="MusicCell" customModule="Ejercicio3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KQx-Qi-4Sl" id="cLp-Ux-XpM">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xe9-fQ-XQ8" id="m9d-dc-mm1">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="1CK-KL-j0f">
+                                            <rect key="frame" x="30" y="10" width="120" height="119"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="120" id="Nwd-0O-KaQ"/>
+                                                <constraint firstAttribute="width" secondItem="1CK-KL-j0f" secondAttribute="height" multiplier="1:1" id="Tlz-7O-6Mp"/>
+                                                <constraint firstAttribute="width" constant="120" id="krU-ae-bwp"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título del album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXF-Ul-Nk8">
+                                            <rect key="frame" x="160" y="10" width="121.33333333333331" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXz-xF-zua">
+                                            <rect key="frame" x="160" y="41" width="29.333333333333343" height="11"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1CK-KL-j0f" firstAttribute="top" secondItem="m9d-dc-mm1" secondAttribute="top" constant="10" id="0HU-0L-Zp2"/>
+                                        <constraint firstItem="dXF-Ul-Nk8" firstAttribute="leading" secondItem="1CK-KL-j0f" secondAttribute="trailing" constant="10" id="3Dw-c2-wz6"/>
+                                        <constraint firstItem="IXz-xF-zua" firstAttribute="leading" secondItem="1CK-KL-j0f" secondAttribute="trailing" constant="10" id="8lZ-Lq-B5z"/>
+                                        <constraint firstItem="IXz-xF-zua" firstAttribute="top" secondItem="dXF-Ul-Nk8" secondAttribute="bottom" constant="10" id="MIO-ZX-Sgr"/>
+                                        <constraint firstItem="1CK-KL-j0f" firstAttribute="leading" secondItem="m9d-dc-mm1" secondAttribute="leadingMargin" constant="10" id="lWE-lV-vK5"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1CK-KL-j0f" secondAttribute="bottom" constant="10" id="nXX-9K-EBM"/>
+                                        <constraint firstItem="dXF-Ul-Nk8" firstAttribute="top" secondItem="m9d-dc-mm1" secondAttribute="top" constant="10" id="uqy-QJ-mdD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="IDmcell">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <outlet property="artistOutlet" destination="IXz-xF-zua" id="Gk1-aB-Ikd"/>
+                                    <outlet property="imageOutlet" destination="1CK-KL-j0f" id="HhY-q4-Pcw"/>
+                                    <outlet property="titleOutlet" destination="dXF-Ul-Nk8" id="sM7-pq-tEe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="eMU-4e-qLF" id="W6h-sk-GqX"/>
-                            <outlet property="delegate" destination="eMU-4e-qLF" id="FtZ-qC-ZaD"/>
+                            <outlet property="dataSource" destination="eMU-4e-qLF" id="FgN-Za-XLH"/>
+                            <outlet property="delegate" destination="eMU-4e-qLF" id="H0b-r4-Sp0"/>
                         </connections>
                     </tableView>
                 </tableViewController>
@@ -37,6 +76,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="640" height="987"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

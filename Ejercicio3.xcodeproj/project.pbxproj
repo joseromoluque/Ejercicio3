@@ -16,6 +16,9 @@
 		FC95898528F094A8002294F4 /* Ejercicio3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC95898428F094A8002294F4 /* Ejercicio3UITests.swift */; };
 		FC95898728F094A8002294F4 /* Ejercicio3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC95898628F094A8002294F4 /* Ejercicio3UITestsLaunchTests.swift */; };
 		FCBE9BBC28F32BC100AD06BA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE9BBB28F32BC100AD06BA /* TableViewController.swift */; };
+		FCBE9BBE28F32D6500AD06BA /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE9BBD28F32D6500AD06BA /* Album.swift */; };
+		FCBE9BC028F32D7900AD06BA /* AlbumProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE9BBF28F32D7900AD06BA /* AlbumProtocol.swift */; };
+		FCBE9BC228F32D8600AD06BA /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE9BC128F32D8600AD06BA /* MusicCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		FC95898428F094A8002294F4 /* Ejercicio3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ejercicio3UITests.swift; sourceTree = "<group>"; };
 		FC95898628F094A8002294F4 /* Ejercicio3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ejercicio3UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FCBE9BBB28F32BC100AD06BA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		FCBE9BBD28F32D6500AD06BA /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		FCBE9BBF28F32D7900AD06BA /* AlbumProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumProtocol.swift; sourceTree = "<group>"; };
+		FCBE9BC128F32D8600AD06BA /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				FC95896328F094A5002294F4 /* AppDelegate.swift */,
 				FC95896528F094A5002294F4 /* SceneDelegate.swift */,
 				FC95896928F094A5002294F4 /* Main.storyboard */,
+				FCBE9BBD28F32D6500AD06BA /* Album.swift */,
+				FCBE9BBF28F32D7900AD06BA /* AlbumProtocol.swift */,
+				FCBE9BC128F32D8600AD06BA /* MusicCell.swift */,
 				FC95896C28F094A7002294F4 /* Assets.xcassets */,
 				FC95896E28F094A7002294F4 /* LaunchScreen.storyboard */,
 				FC95897128F094A7002294F4 /* Info.plist */,
@@ -260,7 +269,10 @@
 			files = (
 				FC95896428F094A5002294F4 /* AppDelegate.swift in Sources */,
 				FCBE9BBC28F32BC100AD06BA /* TableViewController.swift in Sources */,
+				FCBE9BC028F32D7900AD06BA /* AlbumProtocol.swift in Sources */,
 				FC95896628F094A5002294F4 /* SceneDelegate.swift in Sources */,
+				FCBE9BBE28F32D6500AD06BA /* Album.swift in Sources */,
+				FCBE9BC228F32D8600AD06BA /* MusicCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
